@@ -12,7 +12,7 @@ uname -r
 cek pastikan TIDAK ada mengandung kata cloud
 
 ```
-wget https://raw.githubusercontent.com/beryindo/genieacs/refs/heads/main/vpnsetup.sh
+wget https://raw.githubusercontent.com/plugnowplay/genieacs/refs/heads/main/vpnsetup.sh
 chmod +x vpnsetup.sh
 ./vpnsetup.sh
 ```
@@ -45,7 +45,7 @@ ip route add 10.0.0.0/24 dev ppp0
 apt update
 apt upgrade
 apt install curl
-wget https://raw.githubusercontent.com/beryindo/genieacs/refs/heads/main/genie.sh
+wget https://raw.githubusercontent.com/plugnowplay/genieacs/refs/heads/main/genie.sh
 chmod +x genie.sh
 ./genie.sh
 ```
@@ -56,14 +56,14 @@ Lanjutkan dengan update Config, Provisioning dan Virtual Parameter
 ```
 mkdir /root/db
 cd /root/db
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/config.bson
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/config.metadata.json
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/presets.bson
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/presets.metadata.json
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/provisions.bson
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/provisions.metadata.json
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/virtualParameters.bson
-wget https://github.com/beryindo/genieacs/raw/refs/heads/main/virtualParameters.metadata.json
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/config.bson
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/config.metadata.json
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/presets.bson
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/presets.metadata.json
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/provisions.bson
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/provisions.metadata.json
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/virtualParameters.bson
+wget https://github.com/plugnowplay/genieacs/raw/refs/heads/main/virtualParameters.metadata.json
 mongorestore --db genieacs --drop /root/db
 systemctl start genieacs-{cwmp,ui,nbi}
 ```
